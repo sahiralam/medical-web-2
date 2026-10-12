@@ -5,39 +5,41 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <!-- Bootstrap 5 CSS CDN (Modal ke liye) -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="doctor.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-    <link rel="stylesheet" href="https://googleapis.com">
 </head>
 
-<header class="header">
-
-    <!-- Medical Logo -->
-    <a href="#" class="medical-logo">
-
-        <!-- Heart Icon -->
-        <div class="heart-logo">
-            <span class="ecg">〽</span>
-        </div>
-
-        <!-- Logo Text -->
-        <div class="logo-text">
-            <span>Health</span><b>Care+</b>
-        </div>
-
-    </a>
-    <nav class="nav-links">
-        <a href="medicare (1) (6).html">Home</a>
-        <a href="service.html">Services</a>
-        <a href="doctor.html">Doctor's</a>
-        <a href="about.html">About Us</a>
-        <a href="">Contact Us</a>
-    </nav>
-
-     <button class="book-btn"><a href="book-page.html"> Book Appointment</a></button>
-</header>
-
 <body>
+
+    <header class="header">
+
+        <!-- Medical Logo -->
+        <a href="#" class="medical-logo">
+
+            <!-- Heart Icon -->
+            <div class="heart-logo">
+                <span class="ecg">〽</span>
+            </div>
+
+            <!-- Logo Text -->
+            <div class="logo-text">
+                <span>Health</span><b>Care+</b>
+            </div>
+
+        </a>
+        <nav class="nav-links">
+            <a href="medicare (1) (6).html">Home</a>
+            <a href="service.html">Services</a>
+            <a href="doctor.html">Doctor's</a>
+            <a href="about.html">About Us</a>
+            <a href="contact.html">Contact Us</a>
+        </nav>
+
+         <button class="book-btn"><a href="book-page.html"> Book Appointment</a></button>
+    </header>
+
     <section class="doctors-section">
 
         <div class="section-header">
@@ -50,7 +52,8 @@
                     best possible care.</p>
 
             </div>
-            <button class="btn-view-all">View All Doctors</button>
+            <!-- View All Doctors Button triggered via Bootstrap Modal -->
+            <button class="btn-view-all" data-bs-toggle="modal" data-bs-target="#allDoctorsModal">View All Doctors</button>
         </div>
 
         <div class="doctors-grid">
@@ -106,7 +109,6 @@
                     </div>
                 </div>
             </div>
-
 
         </div>
 
@@ -188,10 +190,280 @@
                     </div>
                 </div>
 
-
-
-
         </div>
+    </section>
+
+    <!-- VIEW ALL DOCTORS MODAL (12 Doctors) -->
+    <div class="modal fade" id="allDoctorsModal" tabindex="-1" aria-labelledby="allDoctorsModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl modal-dialog-scrollable">
+            <div class="modal-content border-0 shadow-lg">
+                <div class="modal-header bg-primary text-white">
+                    <h5 class="modal-title" id="allDoctorsModalLabel">All Available Doctors (12 Specialists)</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body p-4 bg-light">
+                    <div class="row g-4">
+                        
+                        <!-- Doctor 1 -->
+                        <div class="col-md-3">
+                            <div class="card h-100 shadow-sm border-0">
+                                <img src="femaledoc1jpg.jpg" class="card-img-top" style="height: 180px; object-fit: cover;" alt="Dr. Ayesha Khan">
+                                <div class="card-body d-flex flex-column">
+                                    <h6 class="fw-bold mb-1">Dr. Ayesha Khan</h6>
+                                    <p class="text-muted small mb-2">General Physician</p>
+                                    <button class="btn btn-primary btn-sm mt-auto" data-bs-toggle="modal" data-bs-target="#bookingModal">Book Now</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Doctor 2 -->
+                        <div class="col-md-3">
+                            <div class="card h-100 shadow-sm border-0">
+                                <img src="doctor.jpg" class="card-img-top" style="height: 180px; object-fit: cover;" alt="Dr. Usman Raza">
+                                <div class="card-body d-flex flex-column">
+                                    <h6 class="fw-bold mb-1">Dr. Usman Raza</h6>
+                                    <p class="text-muted small mb-2">Cardiologist</p>
+                                    <button class="btn btn-primary btn-sm mt-auto" data-bs-toggle="modal" data-bs-target="#bookingModal">Book Now</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Doctor 3 -->
+                        <div class="col-md-3">
+                            <div class="card h-100 shadow-sm border-0">
+                                <img src="femaledoc.jpg" class="card-img-top" style="height: 180px; object-fit: cover;" alt="Dr. Fatima Saeed">
+                                <div class="card-body d-flex flex-column">
+                                    <h6 class="fw-bold mb-1">Dr. Fatima Saeed</h6>
+                                    <p class="text-muted small mb-2">Gynecologist</p>
+                                    <button class="btn btn-primary btn-sm mt-auto" data-bs-toggle="modal" data-bs-target="#bookingModal">Book Now</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Doctor 4 -->
+                        <div class="col-md-3">
+                            <div class="card h-100 shadow-sm border-0">
+                                <img src="doctor1.jpg" class="card-img-top" style="height: 180px; object-fit: cover;" alt="Dr. Bilal Ahmed">
+                                <div class="card-body d-flex flex-column">
+                                    <h6 class="fw-bold mb-1">Dr. Bilal Ahmed</h6>
+                                    <p class="text-muted small mb-2">Orthopedic Surgeon</p>
+                                    <button class="btn btn-primary btn-sm mt-auto" data-bs-toggle="modal" data-bs-target="#bookingModal">Book Now</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Doctor 5 -->
+                        <div class="col-md-3">
+                            <div class="card h-100 shadow-sm border-0">
+                                <img src="femaledoc1jpg.jpg" class="card-img-top" style="height: 180px; object-fit: cover;" alt="Dr. Sara Ali">
+                                <div class="card-body d-flex flex-column">
+                                    <h6 class="fw-bold mb-1">Dr. Sara Ali</h6>
+                                    <p class="text-muted small mb-2">Dermatologist</p>
+                                    <button class="btn btn-primary btn-sm mt-auto" data-bs-toggle="modal" data-bs-target="#bookingModal">Book Now</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Doctor 6 -->
+                        <div class="col-md-3">
+                            <div class="card h-100 shadow-sm border-0">
+                                <img src="doctor.jpg" class="card-img-top" style="height: 180px; object-fit: cover;" alt="Dr. Kamran Akmal">
+                                <div class="card-body d-flex flex-column">
+                                    <h6 class="fw-bold mb-1">Dr. Kamran Akmal</h6>
+                                    <p class="text-muted small mb-2">Neurologist</p>
+                                    <button class="btn btn-primary btn-sm mt-auto" data-bs-toggle="modal" data-bs-target="#bookingModal">Book Now</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Doctor 7 -->
+                        <div class="col-md-3">
+                            <div class="card h-100 shadow-sm border-0">
+                                <img src="femaledoc.jpg" class="card-img-top" style="height: 180px; object-fit: cover;" alt="Dr. Hina Altaf">
+                                <div class="card-body d-flex flex-column">
+                                    <h6 class="fw-bold mb-1">Dr. Hina Altaf</h6>
+                                    <p class="text-muted small mb-2">Pediatrician</p>
+                                    <button class="btn btn-primary btn-sm mt-auto" data-bs-toggle="modal" data-bs-target="#bookingModal">Book Now</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Doctor 8 -->
+                        <div class="col-md-3">
+                            <div class="card h-100 shadow-sm border-0">
+                                <img src="doctor1.jpg" class="card-img-top" style="height: 180px; object-fit: cover;" alt="Dr. Zeeshan Malik">
+                                <div class="card-body d-flex flex-column">
+                                    <h6 class="fw-bold mb-1">Dr. Zeeshan Malik</h6>
+                                    <p class="text-muted small mb-2">Ophthalmologist</p>
+                                    <button class="btn btn-primary btn-sm mt-auto" data-bs-toggle="modal" data-bs-target="#bookingModal">Book Now</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Doctor 9 -->
+                        <div class="col-md-3">
+                            <div class="card h-100 shadow-sm border-0">
+                                <img src="femaledoc1jpg.jpg" class="card-img-top" style="height: 180px; object-fit: cover;" alt="Dr. Sadia Imam">
+                                <div class="card-body d-flex flex-column">
+                                    <h6 class="fw-bold mb-1">Dr. Sadia Imam</h6>
+                                    <p class="text-muted small mb-2">Psychiatrist</p>
+                                    <button class="btn btn-primary btn-sm mt-auto" data-bs-toggle="modal" data-bs-target="#bookingModal">Book Now</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Doctor 10 -->
+                        <div class="col-md-3">
+                            <div class="card h-100 shadow-sm border-0">
+                                <img src="doctor.jpg" class="card-img-top" style="height: 180px; object-fit: cover;" alt="Dr. Tariq Jamil">
+                                <div class="card-body d-flex flex-column">
+                                    <h6 class="fw-bold mb-1">Dr. Tariq Jamil</h6>
+                                    <p class="text-muted small mb-2">Dentist</p>
+                                    <button class="btn btn-primary btn-sm mt-auto" data-bs-toggle="modal" data-bs-target="#bookingModal">Book Now</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Doctor 11 -->
+                        <div class="col-md-3">
+                            <div class="card h-100 shadow-sm border-0">
+                                <img src="femaledoc.jpg" class="card-img-top" style="height: 180px; object-fit: cover;" alt="Dr. Sana Bucha">
+                                <div class="card-body d-flex flex-column">
+                                    <h6 class="fw-bold mb-1">Dr. Sana Bucha</h6>
+                                    <p class="text-muted small mb-2">ENT Specialist</p>
+                                    <button class="btn btn-primary btn-sm mt-auto" data-bs-toggle="modal" data-bs-target="#bookingModal">Book Now</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Doctor 12 -->
+                        <div class="col-md-3">
+                            <div class="card h-100 shadow-sm border-0">
+                                <img src="doctor1.jpg" class="card-img-top" style="height: 180px; object-fit: cover;" alt="Dr. Fahad Mustafa">
+                                <div class="card-body d-flex flex-column">
+                                    <h6 class="fw-bold mb-1">Dr. Fahad Mustafa</h6>
+                                    <p class="text-muted small mb-2">Urologist</p>
+                                    <button class="btn btn-primary btn-sm mt-auto" data-bs-toggle="modal" data-bs-target="#bookingModal">Book Now</button>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="modal-footer bg-light">
+                    <button type="button" class="btn btn-secondary px-4" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+   <!-- BOOKING APPOINTMENT MODAL -->
+<div class="modal fade" id="bookingModal" tabindex="-1" aria-labelledby="bookingModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content border-0 shadow-lg">
+            <div class="modal-header bg-primary text-white">
+                <h5 class="modal-title" id="bookingModalLabel">Book Appointment</h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body p-4">
+                <div class="mb-3">
+                    <h4 id="modalDoctorName" class="fw-bold mb-1" style="color: #102c50;">Doctor Appointment</h4>
+                    <p class="text-muted small mb-3">Status: <span id="modalDoctorStatus" class="badge bg-success">Available Now</span></p>
+                </div>
+
+                <form id="bookingForm">
+                    <div class="mb-3">
+                        <label class="form-label fw-semibold">Your Name</label>
+                        <input type="text" class="form-control" id="patientName" placeholder="Enter your full name" required>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label fw-semibold">Phone Number</label>
+                        <input type="tel" class="form-control" id="patientPhone" placeholder="Enter phone number" required>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label fw-semibold">Appointment Date</label>
+                        <input type="date" class="form-control" id="appointmentDate" required>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer bg-light">
+                <button type="button" class="btn btn-secondary px-4" data-bs-dismiss="modal">Cancel</button>
+                <!-- Confirm Booking Button -->
+                <button type="button" id="confirmBookingBtn" class="btn btn-primary px-4" style="background-color: #0066cc;">Confirm Booking</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- CONFIRMATION SUCCESS MODAL POPUP -->
+<div class="modal fade" id="successModal" tabindex="-1" aria-labelledby="successModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content border-0 shadow-lg text-center p-4">
+            <div class="modal-header border-0 pb-0 justify-content-center">
+                <div style="width: 60px; height: 60px; background: #e6f7ec; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: #078443; font-size: 30px;">
+                    <i class="bi bi-check-lg"></i>
+                </div>
+            </div>
+            <div class="modal-body">
+                <h4 class="fw-bold text-success mb-2">Booking Confirmed!</h4>
+                <p class="text-muted small mb-0">Aapki appointment <strong id="successDoctorName">Doctor</strong> ke sath successfully book ho chuki hai.</p>
+            </div>
+            <div class="modal-footer border-0 justify-content-center pt-0">
+                <button type="button" class="btn btn-primary px-5" data-bs-dismiss="modal" style="background-color: #0066cc; border-radius: 20px;">OK</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    let selectedDoctor = 'Doctor';
+
+    // Doctor modal trigger hone par Doctor ka name update karna
+    const bookingModal = document.getElementById('bookingModal');
+    if (bookingModal) {
+        bookingModal.addEventListener('show.bs.modal', function (event) {
+            const button = event.relatedTarget;
+            if (button) {
+                selectedDoctor = button.getAttribute('data-doctor-name') || 'Doctor';
+                const status = button.getAttribute('data-doctor-status') || 'Available Now';
+
+                const modalTitle = document.getElementById('modalDoctorName');
+                const modalStatus = document.getElementById('modalDoctorStatus');
+
+                if (modalTitle) modalTitle.textContent = selectedDoctor;
+                if (modalStatus) {
+                    modalStatus.textContent = status;
+                    modalStatus.className = 'badge ' + (status === 'Available Now' ? 'bg-success' : 'bg-danger');
+                }
+            }
+        });
+    }
+
+    // Confirm Booking button click event handler
+    document.getElementById('confirmBookingBtn').addEventListener('click', function () {
+        const nameVal = document.getElementById('patientName').value;
+        if (!nameVal.trim()) {
+            alert('Please enter your name!');
+            return;
+        }
+
+        // Pehla Booking modal close karein
+        const bookingModalInstance = bootstrap.Modal.getInstance(bookingModal);
+        if (bookingModalInstance) {
+            bookingModalInstance.hide();
+        }
+
+        // Confirmation Message Modal mein Doctor ka name set karein
+        document.getElementById('successDoctorName').textContent = selectedDoctor;
+
+        // Confirmation Success Modal open karein
+        const successModalEl = document.getElementById('successModal');
+        const successModalInstance = new bootstrap.Modal(successModalEl);
+        successModalInstance.show();
+    });
+</script>
+    <!-- Bootstrap 5 JS Bundle CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>
