@@ -101,7 +101,7 @@
     color: #087ee8;
 }
 
-.appointment {
+.book-btn {
     display: inline-block;
     width: 130px;
     height: 38px;
@@ -119,9 +119,15 @@
     box-shadow: 0 4px 10px rgba(8, 126, 232, 0.25);
 }
 
-.appointment:hover {
+.book-btn:hover {
     background: #066bc4;
 }
+
+.book-btn a{
+    color: white ;
+    text-decoration: none;
+}
+
 * {
     margin: 0;
     padding: 0;

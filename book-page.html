@@ -1,147 +1,233 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <title>Our Doctors | HealthCare+</title>
+
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
     <link rel="stylesheet" href="book-page.css">
 </head>
 
-<header class="header">
-
-    <!-- Medical Logo -->
-    <a href="#" class="medical-logo">
-
-        <!-- Heart Icon -->
-        <div class="heart-logo">
-            <span class="ecg">〽</span>
-        </div>
-
-        <!-- Logo Text -->
-        <div class="logo-text">
-            <span>Health</span><b>Care+</b>
-        </div>
-
-    </a>
-    <nav class="nav-links">
-        <a href="medicare (1) (6).html">Home</a>
-        <a href="service.html">Services</a>
-        <a href="doctor.html">Doctor's</a>
-        <a href="about.html">About Us</a>
-        <a href="">Contact Us</a>
-    </nav>
-
-</header>
-
 <body>
+
+    <!-- HEADER -->
+    <header class="header">
+
+        <a href="#" class="medical-logo">
+            <div class="heart-logo">
+                <span class="ecg">〽</span>
+            </div>
+
+            <div class="logo-text">
+                <span>Health</span><b>Care+</b>
+            </div>
+        </a>
+
+        <nav class="nav-links">
+            <a href="medicare (1) (6).html">Home</a>
+            <a href="service.html">Services</a>
+            <a href="doctor.html">Doctor's</a>
+            <a href="about.html">About Us</a>
+            <a href="#contact">Contact Us</a>
+        </nav>
+
+    </header>
+
+    <!-- DOCTORS SECTION -->
     <section class="doctors-section">
 
         <div class="section-header">
 
             <div class="header-text">
-
                 <span class="sub-title">OUR DOCTORS</span>
-                <h1 class="main-heading">Meet Our Experienced Doctors</h1>
-                <p class="description">Our team of skilled and compassionate doctors are here to provide you with the
-                    best possible care.</p>
 
+                <h1 class="main-heading">
+                    Meet Our Experienced Doctors
+                </h1>
+
+                <p class="description">
+                    Our team of skilled and compassionate doctors are
+                    here to provide you with the best possible care.
+                </p>
             </div>
-            <button class="btn-view-all">View All Doctors</button>
+
+            <a href="doctor.html" class="btn-view-all">
+                View All Doctors
+            </a>
+
         </div>
 
+        <!-- DOCTOR CARDS -->
         <div class="doctors-grid">
 
-            <div class="doctor-card">
+            <!-- DOCTOR 1 -->
+            <article class="doctor-card">
+
                 <div class="doc-img-box">
                     <img src="femaledoc.png" alt="Dr. Ayesha Khan">
                 </div>
+
                 <div class="doc-info">
-                    <h3>Dr. Ayesha Khan</h3>
-                    <p class="specialty">General Physician</p>
-                    <div class="doc-dept">
-                        <i class="bi bi-person-heart"></i> General Medicine
+
+                    <div class="doctor-title-row">
+                        <h3>Dr. Ayesha Khan</h3>
+                        <span class="status-badge busy">
+                            <span class="dot"></span>
+                            Busy Now
+                        </span>
                     </div>
+
+                    <p class="specialty">General Physician</p>
+
+                    <div class="doc-dept">
+                        <i class="bi bi-person-heart"></i>
+                        General Medicine
+                    </div>
+
                     <div class="experience-section">
                         <h3 class="section-title">Experience</h3>
-                        <p class="experience-text">Dr. Usman Raza has become over 12 years of specialized cardiovascular
-                            care and interventional techniques.</p>
+
+                        <p class="experience-text">
+                            Dr. Ayesha Khan provides general healthcare,
+                            patient diagnosis and personalized treatment.
+                        </p>
                     </div>
 
-                    <button class="book-btn">Book Appointment</button>
-                </div>
-            </div>
+                    <button class="book-btn" type="button">
+                        Book Now
+                    </button>
 
-            <div class="doctor-card">
+                </div>
+            </article>
+
+            <!-- DOCTOR 2 -->
+            <article class="doctor-card">
+
                 <div class="doc-img-box">
                     <img src="images (2).jpg" alt="Dr. Usman Raza">
                 </div>
+
                 <div class="doc-info">
-                    <h3>Dr. Usman Raza</h3>
-                    <p class="specialty">Cardiologist</p>
-                    <div class="doc-dept">
-                        <i class="bi bi-heart-pulse"></i> Cardiology
+
+                    <div class="doctor-title-row">
+                        <h3>Dr. Usman Raza</h3>
+                        <span class="status-badge next-slot">
+                            <span class="dot"></span>
+                            Next Slot
+                        </span>
                     </div>
 
+                    <p class="specialty">Cardiologist</p>
+
+                    <div class="doc-dept">
+                        <i class="bi bi-heart-pulse"></i>
+                        Cardiology
+                    </div>
 
                     <div class="experience-section">
                         <h3 class="section-title">Experience</h3>
-                        <p class="experience-text">Dr. Usman Raza has become over 12 years of specialized cardiovascular
-                            care and interventional techniques.</p>
+
+                        <p class="experience-text">
+                            Dr. Usman Raza specializes in cardiovascular
+                            care, heart health and interventional techniques.
+                        </p>
                     </div>
 
-                    <button class="book-btn">Book Appointment</button>
-                </div>
-            </div>
+                    <button class="book-btn" type="button">
+                        Book Now
+                    </button>
 
-            <div class="doctor-card">
+                </div>
+            </article>
+
+            <!-- DOCTOR 3 -->
+            <article class="doctor-card">
+
                 <div class="doc-img-box">
                     <img src="ye wali.jpg" alt="Dr. Fatima Saeed">
                 </div>
+
                 <div class="doc-info">
-                    <h3>Dr. Fatima Saeed</h3>
-                    <p class="specialty">Gynecologist</p>
-                    <div class="doc-dept">
-                        <i class="bi bi-gender-female"></i> Gynecology
+
+                    <div class="doctor-title-row">
+                        <h3>Dr. Fatima Saeed</h3>
+                        <span class="status-badge busy">
+                            <span class="dot"></span>
+                            Busy Now
+                        </span>
                     </div>
 
+                    <p class="specialty">Gynecologist</p>
+
+                    <div class="doc-dept">
+                        <i class="bi bi-gender-female"></i>
+                        Gynecology
+                    </div>
 
                     <div class="experience-section">
                         <h3 class="section-title">Experience</h3>
-                        <p class="experience-text">Dr. Fatima Saeed is an Advanced reproductive endocrinology and
-                            minimally invasive robotic surgery in surgery.</p>
-                    </div>
-                     <button class="book-btn">Book Appointment</button>
-                </div>
-            </div>
 
-            <div class="doctor-card">
+                        <p class="experience-text">
+                            Dr. Fatima Saeed specializes in reproductive
+                            healthcare, women's health and treatment.
+                        </p>
+                    </div>
+
+                    <button class="book-btn" type="button">
+                        Book Now
+                    </button>
+
+                </div>
+            </article>
+
+            <!-- DOCTOR 4 -->
+            <article class="doctor-card">
+
                 <div class="doc-img-box">
                     <img src="images (3).jpg" alt="Dr. Bilal Ahmed">
                 </div>
+
                 <div class="doc-info">
-                    <h3>Dr. Bilal Ahmed</h3>
-                    <p class="specialty">Orthopedic Surgeon</p>
-                    <div class="doc-dept">
-                        <i class="bi bi-capsule"></i> Orthopedics
+
+                    <div class="doctor-title-row">
+                        <h3>Dr. Bilal Ahmed</h3>
+                        <span class="status-badge available">
+                            <span class="dot"></span>
+                            Available Now
+                        </span>
                     </div>
+
+                    <p class="specialty">Orthopedic Surgeon</p>
+
+                    <div class="doc-dept">
+                        <i class="bi bi-capsule"></i>
+                        Orthopedics
+                    </div>
+
                     <div class="experience-section">
                         <h3 class="section-title">Experience</h3>
-                        <p class="experience-text">Dr. Bilal Ahmed has over 15 years rare in complex joint replacement
-                            and trauma surgery, and trauma surgery.</p>
-                    </div>
-                     <button class="book-btn">Book Appointment</button>
-                </div>
-            </div>
 
+                        <p class="experience-text">
+                            Dr. Bilal Ahmed specializes in joint replacement,
+                            orthopedic injuries and trauma surgery.
+                        </p>
+                    </div>
+
+                    <button class="book-btn" type="button">
+                        Book Now
+                    </button>
+
+                </div>
+            </article>
 
         </div>
-
     </section>
 
-
-
 </body>
-
 </html>

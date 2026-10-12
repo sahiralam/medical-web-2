@@ -161,13 +161,16 @@
 }
 
 /* Hero Buttons */
-.hero-content button {
+.hero-content button  {
     background: #087ee8;
-    color: white;
     border: none;
     border-radius: 13px;
     padding: 13px 25px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.hero-content button a{
+    text-decoration: none;
+    color: white;
 }
 
 .hero-content button:hover {
